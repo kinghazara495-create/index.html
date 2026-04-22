@@ -1,12 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>For My Love</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #00adb5;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .btn {
+      background: #00adb5;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .dark {
+      background: #121212;
+      color: white;
+    }
+
+    .dark .card {
+      background: #1e1e1e;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Hey Here We Go You Are Here❤️❤️v </h1`
-    <p>This Is Only For U</p>
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer 🚀</p>
+    <button class="btn" onclick="toggleDark()">Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <a onclick="scrollToSection('about')">About</a>
+    <a onclick="scrollToSection('projects')">Projects</a>
+    <a onclick="scrollToSection('contact')">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I build websites and love coding.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>My first project.</p>
+      </div>
+
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>My second project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView();
+    }
+
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 
 </body>
 </html>
